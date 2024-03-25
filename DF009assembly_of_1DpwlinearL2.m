@@ -116,6 +116,13 @@ for k = 1 : Nk
   G( k + 1, k + 1 ) = G( k + 1, k + 1 ) + D;
 end
 u = G \ b;
+%
+% NB: in real life forget about backslash or inverting matrices without factoring
+% them, we are doing to just for learning.
+%
+% See also: 
+% https://it.mathworks.com/help/matlab/math/iterative-methods-for-linear-systems.html
+%
 
 x = linspace( Omega( 1 ), Omega( 2 ), 100 );
 figure
